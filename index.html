@@ -1,0 +1,112 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500|Righteous|Sniglet" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="train.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+    <title>Train Schedule</title>
+</head>
+<body>
+
+    
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Train Schedule</title>
+   
+   <!--Boostrap-->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+   <!--Google Fonts-->
+   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
+   
+   <!--jQuery-->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   
+   <!--Moment.js-->
+   <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+   
+   <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+
+  <!-- JS file -->
+  <script type="text/javascript" src="train.js"></script>
+
+</head>
+<body>
+  
+  <nav class="jumbotron">
+      <h1>Train Schedule</h1>
+    </nav>
+
+  <div class="container">
+      
+    <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Train Name</th>
+                <th scope="col">Destination</th>
+                <th scope="col">Frequency</th>
+                <th scope="col">Next Arrival</th>
+                  <th scope="col">Minutes Away</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Orient Express</td>
+                <td>St. Petersberg</td>
+                <td>50</td>
+                <td>3:30 AM</td>
+                <td>40</td>
+              </tr>
+              <tr>
+                <td>Picadilly Line</td>
+                <td>Victoria Station</td>
+                <td>10</td>
+                <td>12:35 PM</td>
+                <td>7</td>
+            </tbody>
+          </table>
+
+      <div class="newtrainform"></div>
+        <div class="card-header">Add Trains</div>
+         <br>
+          <form>
+            <div class="form-group">
+              <label for="formGroupTrainName">Train Name</label>
+              <input type="text" class="form-control" id="trainName" value="">
+            </div>
+            <div class="form-group">
+              <label for="formGroupDestination">Destination</label>
+              <input type="text" class="form-control" id="trainDestination" value="">
+            </div>
+            <div class="form-group">
+              <label for="formGroupFirstTrain">First Train Time (hh:mm a)</label>
+              <input type="text" class="form-control" id="firstTrainTime" value="">
+            </div>
+            <div class="form-group">
+              <label for="formGroupFrequency">Frequency (mins)</label>
+              <input type="text" class="form-control" id="frequency" value="">
+              <br>
+              <input type="button" id="submit-btn" value="Submit">
+            </div>
+          </form>
+      </div>
+
+  </div> 
+   
+</body>
+</html>
