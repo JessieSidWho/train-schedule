@@ -38,54 +38,48 @@
    
    <!--Moment.js-->
    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+   <!-- JS file -->
+   <script type="text/javascript" src="train.js"></script>
    
    <!-- Firebase -->
-  <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
-
-  <!-- JS file -->
-  <script type="text/javascript" src="train.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
 
 </head>
-<body>
+<body class="container">
   
-  <nav class="jumbotron">
-      <h1>Train Schedule</h1>
-    </nav>
+  <div class="jumbotron text-center bg-primary text-white">
+      <h1 class="display-3">Train Schedule</h1>
+  </div>
 
-  <div class="container">
-      
-    <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Train Name</th>
-                <th scope="col">Destination</th>
-                <th scope="col">Frequency</th>
-                <th scope="col">Next Arrival</th>
-                  <th scope="col">Minutes Away</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Orient Express</td>
-                <td>St. Petersberg</td>
-                <td>50</td>
-                <td>3:30 AM</td>
-                <td>40</td>
-              </tr>
-              <tr>
-                <td>Picadilly Line</td>
-                <td>Victoria Station</td>
-                <td>10</td>
-                <td>12:35 PM</td>
-                <td>7</td>
-            </tbody>
-          </table>
-
-      <div class="newtrainform"></div>
-        <div class="card-header">Add Trains</div>
+  <div class=" row border border border-primary rounded-lg">
+      <div class="col-md-12 ">
+        <table class="  table  ">
+                <thead class="">
+                  <tr class=" ">
+                    <th scope="col">Train Name</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Frequency</th>
+                    <th scope="col">Next Arrival</th>
+                    <th scope="col">Minutes Away</th>
+                  </tr>
+                </thead>
+                <tbody>
+    
+                </tbody>
+        </table>
+      </div>           
+  </div>
          <br>
+
+    <div class="row newtrainform border border-bottom-0 border-primary rounded-lg">
+      <div class="col-md-12 card-header ">Add Trains</div>
+    </div>
+
+    <div class="row border border-top-0 border-primary mb-5 rounded-lg">
+      <div class="col-md-12">
           <form>
-            <div class="form-group">
+            <div class="form-group ">
               <label for="formGroupTrainName">Train Name</label>
               <input type="text" class="form-control" id="trainName" value="">
             </div>
@@ -101,12 +95,13 @@
               <label for="formGroupFrequency">Frequency (mins)</label>
               <input type="text" class="form-control" id="frequency" value="">
               <br>
-              <input type="button" id="submit-btn" value="Submit">
+              <button class="btn btn-primary " type="button" id="submit" value="">SUBMIT</button>
             </div>
           </form>
       </div>
+    </div>
 
-  </div> 
+  
    
 </body>
 </html>
